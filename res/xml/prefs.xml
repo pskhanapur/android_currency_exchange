@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <EditTextPreference android:summary="@string/refresh_summary" android:title="@string/refresh" android:key="refresh"/>
+    <ListPreference android:entryValues="@array/RefreshRateValues" android:entries="@array/RefreshRate" android:key="selectRefresh" android:summary="@string/select_refresh_summary" android:title="@string/select_refresh"/>
+    
+
+</PreferenceScreen>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.reallynow"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="3"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <application  android:name=".ReallyNowApp" android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+        <activity android:name="AddCurrActivity"
+                  android:label="@string/app_name">
+        </activity>
+        <activity android:name=".TimelineActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+         </activity>
+        <activity android:name=".PrefsActivity"></activity>
+        <service android:name=".UpdaterService">
+            <intent-filter >
+                <action android:name="com.reallynow.GET_LATEST_DATA"/>
+            </intent-filter>
+        </service>
+        <receiver android:name=".Scheduler">
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

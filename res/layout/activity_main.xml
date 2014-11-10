@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.reallynow.MainActivity$PlaceholderFragment" 
+    android:background="#ff000000" >
+
+    <TextView
+        android:id="@+id/AddTrackingHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Add Currency "
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:textColor="#ffffffff"/>
+    
+     <Button
+        android:id="@+id/AddTracking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AddTrackingHeader"
+        android:layout_marginTop="18dp"
+        android:text="Add"
+        android:textColor="#ff000000"/>>
+    
+    <EditText
+        android:id="@+id/FromCurr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_alignLeft="@+id/AddTracking"
+        android:layout_below="@+id/AddTracking"        
+        android:minEms="3"
+        android:hint="NOK"
+        android:maxLines="1" 
+        android:maxLength="3" 
+        android:textColor="#ff000000" >
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/toStr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/FromCurr"
+        android:layout_alignBottom="@+id/FromCurr"
+        android:layout_centerHorizontal="true"
+        android:minEms="2"
+        android:text="--->"
+        android:textColor="#ffffffff" 
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/ToCurr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toStr"
+        android:layout_alignRight="@+id/AddTracking"
+        android:minEms="3"
+        android:hint="INR"
+        android:maxLines="1"
+        android:maxLength="3"
+        android:textColor="#ff000000" />
+    
+</RelativeLayout>
